@@ -77,7 +77,7 @@ function CALLPAGE_(path,options, returnParamPath){
 
 
 /**
- * Builds a complete URL from a base URL and a map of URL parameters.
+ * Builds a complete URL from a base URL and a map of URL parameters. Adapted from Eric Koleda's OAuth2 Lib.
  * @param {string} url The base URL.
  * @param {Object.<string, string>} params The URL parameters and values.
  * @returns {string} The complete URL.
