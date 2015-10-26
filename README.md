@@ -108,4 +108,13 @@ The examples below assume you setup the library with the Blogger namespace.
       Logger.log(info);
     } 
 
+    function insertPost(){
+       Blogger.setTokenService(function(){ return getBloggerService().getAccessToken()}); 
+       var resource = {title:"TEST AT: " + new Date(),
+                       content: "THIS IS THE SUPER AWESOME BODY OF THE POST!<br><b>BOLD</b><br><i>FANCY</i><br>",
+                       labels:["TEST","GAS LIBRARY"]
+                     }
+      var results = Blogger.Posts.insert("3522258539625557047",resource);
+      Logger.log(results);
+    }
 
