@@ -76,7 +76,7 @@ self_.Posts.search = function(blogId,query,options){
 self_.Posts.update = function(blogId,postId,postResource, options){
   var path = buildUrl_("blogs/"+blogId+"/posts/"+postId ,options);
   var payload = JSON.stringify(postResource);
-  var callOptions = {method:"POST",payload:payload};
+  var callOptions = {method:"PUT",payload:payload};
   var postsResource = CALL_(path,callOptions);
   return postsResource;
 };
